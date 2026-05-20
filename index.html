@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#170f12" />
+    <title>AHMEDÎ — HAYATI VE ESERLERİ — SAZLAR MÜNÂZARASI</title>
+    <link rel="preload" href="./siir26.mp3" as="audio" type="audio/mpeg" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="is-locked">
+    <div class="backdrop" aria-hidden="true">
+      <div class="glow glow-a"></div>
+      <div class="glow glow-b"></div>
+      <div class="glow glow-c"></div>
+      <div class="grain"></div>
+    </div>
+
+    <button class="start-screen" id="startScreen" type="button">
+      <span class="start-screen__frame"></span>
+      <span class="start-screen__eyebrow">Şiir Sunumu</span>
+      <strong class="start-screen__title">Sazlar Münâzarası</strong>
+      <span class="start-screen__meta">AHMEDÎ • 01:59</span>
+      <span class="start-screen__hint">Şiiri başlatmak için ekrana dokun</span>
+      <span class="start-screen__note">
+        Mobil tarayıcılar sesli otomatik başlatmayı engellediği için ilk dokunuş gerekiyor.
+      </span>
+    </button>
+
+    <audio id="poemAudio" src="./siir26.mp3" preload="auto" loop playsinline></audio>
+
+    <main class="app">
+      <section class="hero">
+        <div class="hero__topline">
+          <span class="pill">AHMEDÎ</span>
+          <span class="pill">Edebiyat</span>
+          <span class="pill">01:59</span>
+        </div>
+
+        <div class="hero__copy">
+          <p class="eyebrow">Ahmedî'nin hayatı ve Sazlar Münâzarası</p>
+          <h1>AHMEDÎ — HAYATI VE ESERLERİ</h1>
+          <p class="intro">
+            Sazlar Münâzarası hakkında kısa bilgiler ve eserden alınan günümüz Türkçesiyle metinler.
+          </p>
+        </div>
+
+        <section class="player-card" aria-label="Şiir oynatıcısı">
+          <div class="player-card__halo"></div>
+          <div class="player-card__header">
+            <span class="player-card__label">Canlı akış</span>
+            <span class="player-card__status" id="playState">Başlatılmadı</span>
+          </div>
+
+          <div class="player-card__core">
+            <div class="orb">
+              <svg class="progress-ring" viewBox="0 0 180 180" aria-hidden="true">
+                <circle class="progress-ring__track" cx="90" cy="90" r="74"></circle>
+                <circle class="progress-ring__value" cx="90" cy="90" r="74"></circle>
+              </svg>
+              <div class="orb__center">
+                <span class="orb__label">Süre</span>
+                <strong id="currentTime">00:00</strong>
+                <span id="totalTime">01:59</span>
+              </div>
+            </div>
+
+            <div class="equalizer" id="equalizer" aria-hidden="true"></div>
+          </div>
+
+          <div class="controls">
+            <button class="control-button" id="soundToggle" type="button">Sesi Kapat</button>
+            <button class="control-button control-button--ghost" id="restartButton" type="button">
+              Baştan Sar
+            </button>
+          </div>
+        </section>
+      </section>
+
+      <section class="lyrics">
+        <div class="section-title">
+          <p class="eyebrow">Şiirin sözleri</p>
+          <h2>Zaman damgaları çıkarıldı, sözler 9 akış kartına bölündü</h2>
+        </div>
+
+        <div class="verses" id="verses">
+          <article class="verse-card is-active" data-start="0" data-end="5" style="--delay: 0s;">
+            <span class="verse-card__index">I</span>
+            <p>Ahmedî: Sazlar Münâzarası adlı eseri ile tanınan</p>
+            <p>Ahmedî hakkında bilgilerimiz çok sınırlıdır.</p>
+          </article>
+
+          <article class="verse-card" data-start="5" data-end="14" style="--delay: 0.6s;">
+            <span class="verse-card__index">II</span>
+            <p>Eserinden bazı bilgiler edinilse de bunlar içerisinde en sağlamı, eserin üslubundan</p>
+            <p>anlaşılacağı üzere Ahmedî’nin klâsik Çağatay öncesi şairlerinden oluşudur.</p>
+          </article>
+
+          <article class="verse-card" data-start="14" data-end="22" style="--delay: 1.2s;">
+            <span class="verse-card__index">III</span>
+            <p>Ayrıca eserinden Ahmedî’nin değerli bir şair olduğu ve sağlam bir mûsikî kültürüne</p>
+            <p>sahip bulunduğu anlaşılmaktadır.</p>
+          </article>
+
+          <article class="verse-card" data-start="22" data-end="39" style="--delay: 1.8s;">
+            <span class="verse-card__index">IV</span>
+            <p>Eser, nesir olarak yazılmış kısa mukaddimeden sonra gelen 130 beyitten oluşan küçük</p>
+            <p>bir mesnevidir.</p>
+            <p>Mesnevinin konusu, meyhanede bulunan sekiz telli sazın yani tanbur, ud, çeng,</p>
+            <p>kopuz, yaturgan, rebab, kungura gibi çalgıların birbiriyle tartışmaları ve her birinin</p>
+            <p>kendisini üstün görüp benlik davası gütmesidir.</p>
+          </article>
+
+          <article class="verse-card" data-start="39" data-end="53" style="--delay: 2.4s;">
+            <span class="verse-card__index">V</span>
+            <p>Onların arasındaki bu münazara yani çekişme insanlar arasındaki çekişmelere benzer.</p>
+            <p>Meyhanenin piri, bu münazarayı sona erdirmeyi tavsiye eder ve sazların hepsini azarlar.</p>
+          </article>
+
+          <article class="verse-card" data-start="53" data-end="66" style="--delay: 3s;">
+            <span class="verse-card__index">VI</span>
+            <p>Sembolik özellik taşıyan Sazlar Münâzarası adlı eserde benlik davası güden sazlar,</p>
+            <p>doğru yolu bulamamış, vahdet sırrına ermemiş basit insanları,</p>
+            <p>meyhanenin piri ise doğru yolu gösteren mürşidi temsil etmektedir.</p>
+          </article>
+
+          <article class="verse-card" data-start="66" data-end="76" style="--delay: 3.6s;">
+            <span class="verse-card__index">VII</span>
+            <p>Eserin bilinen tek nüshası Londra British Museum'da kayıtlıdır.</p>
+            <p>Sazlar Münâzarası adlı eserden günümüz Türkçesiyle:</p>
+          </article>
+
+          <article class="verse-card" data-start="76" data-end="89" style="--delay: 4.2s;">
+            <span class="verse-card__index">VIII</span>
+            <p>Çeng boynunu hemen aradan uzatıp işte o an binlerce figan kopardı.</p>
+            <p>Hepsinin ustası benim; Yeme-içme ve eğlencenin de esasıyım bunu</p>
+            <p>bilin dedi.</p>
+          </article>
+
+          <article class="verse-card" data-start="89" data-end="119" style="--delay: 4.8s;">
+            <span class="verse-card__index">IX</span>
+            <p>Şubedeki terkip, amel, işleme ve güzel sesler,</p>
+            <p>ne varsa hiçbirini bir an olsun terk etmedim.</p>
+            <p>Gamzelerim hepsinden fazladır.</p>
+            <p>Sevgili benim gamzeme âşıktır, tutulmuştur.</p>
+            <p>Makamım her zaman halkın omzunda benim gibi tatlı sözlü papağan yoktur.</p>
+            <p>Sohbetim daima şahlar iledir.</p>
+            <p>Dostluğum ise yaratılışlı, zevk sahipleriyledir.</p>
+            <p>Tanbure gibi yüz tanesini ayak altına alayım.</p>
+            <p>Delikanlılar onu mendil yaptılar.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
